@@ -1,0 +1,21 @@
+[project]
+name = "vira"
+version = "0.1.0"
+description = "ViRA: visual agents trained with Cross-Input Relative Policy Optimization (CrossRPO)"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = ["numpy", "pillow", "pandas", "pyarrow"]
+
+[project.optional-dependencies]
+eval = ["openai", "huggingface_hub"]
+hf = ["huggingface_hub"]
+
+[tool.setuptools.packages.find]
+include = ["vira*"]
+
+[tool.setuptools.package-data]
+"vira.train" = ["config/*.yaml"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

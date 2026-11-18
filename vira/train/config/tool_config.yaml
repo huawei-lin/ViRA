@@ -1,0 +1,6 @@
+# Zoom tool for verl's ToolAgentLoop (vira.train.zoom_tool). The model sees the tool in DeepEyes' system
+# prompt, not through the chat template; this schema is only verl's registry entry.
+tools:
+  - class_name: vira.train.zoom_tool.ZoomTool
+    config:
+      type: native

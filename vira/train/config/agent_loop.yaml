@@ -1,0 +1,9 @@
+# agent_name "vira_agent" (parquet column). The keys besides name and _target_ go to ViRAAgentLoop. scripts/train.sh
+# writes a copy per run with the budget range, the seed, the reply cap and the judge key file.
+- name: vira_agent
+  _target_: vira.train.agent_loop.ViRAAgentLoop
+  x_lo: 0.5
+  x_hi: 16.777216
+  x_seed: 42
+  train_turn_cap: 4096
+  judge_key_file: ""
